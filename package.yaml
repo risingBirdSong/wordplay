@@ -22,6 +22,12 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 - containers
+- lens 
+- transformers
+- mtl
+- list-transformer
+- random
+- MonadRandom
 
 library:
   source-dirs: src
