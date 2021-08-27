@@ -1,10 +1,177 @@
+
 module Words where
      
 import qualified Data.Set as S 
 
-allWords = S.unions [adverbSet, verbSet, nounSet, adjectivesSet]
+allWords = S.unions [preposistionSet ,adverbSet, verbSet, nounSet, adjectivesSet, connectiveSet, pronounSet]
+
+preposistionSet = S.fromList preposistions
+
+preposistions = [
+    "aboard","about","above","according to","across","after","against","ahead of","along","amid","amidst","among","around","as","as far as","as of","aside from","at","athwart","atop",
+
+    "barring","because of","before","behind","below","beneath","beside","besides","between","beyond","but (when it means except)","by","by means of",
+
+    "circa","concerning",
+
+    "despite","down","due to","during",
+
+    "except","except for","excluding",
+
+    "far from","following","for","from",
+
+    "in","in accordance with","in addition to","in case of","in front of","in lieu of","in place of","in spite of","including","inside","instead of","into",
+
+    "like",
+
+    "minus",
+
+    "near","next to","notwithstanding",
+
+    "of","off","on","on account of","on behalf of","on top of","onto","opposite","out","out of","outside","over",
+
+    "past","plus","prior to",
+
+    "regarding","regardless of",
+
+    "save","since",
+
+    "than","through","throughout","till","to","toward","towards",
+
+    "under","underneath","unlike","until","up","upon",
+
+    "versus","via",
+
+    "with","with regard to","within","without"]
+
+connectiveSet = S.fromList connectives
+
+
+connectives = ["and"," also"," besides"," further"," furthermore"," too"," moreover"," in addition"," then"," of equal importance"," equally important"," another",
+	"next"," afterward"," finally"," later"," last"," lastly"," at last"," now"," subsequently"," then"," when"," soon"," thereafter"," after a short time"," the next week (month"," day"," etc.)"," a minute later"," in the meantime"," meanwhile"," on the following day"," at length"," ultimately"," presently",
+
+	"first"," second"," (etc.)"," finally"," hence"," next"," then"," from here on"," to begin with"," last of all"," after"," before"," as soon as"," in the end"," gradually",
+	"above"," behind"," below"," beyond"," here"," there"," to the right (left)"," nearby"," opposite"," on the other side"," in the background"," directly ahead"," along the wall"," as you turn right"," at the top"," across the hall"," at this point"," adjacent to",
+
+	"for example"," to illustrate"," for instance"," to be specific"," such as"," moreover"," furthermore"," just as important"," similarly"," in the same way",
+	"as a result"," hence"," so"," accordingly"," as a consequence"," consequently"," thus"," since"," therefore"," for this reason","because of this",
+	"to this end"," for this purpose"," with this in mind"," for this reason(s)"
+  ]
 
 adverbSet = S.fromList ["abnormally","absentmindedly","accidentally","actually","adventurously","afterwards","almost","always","annually","anxiously","arrogantly","awkwardly","bashfully","beautifully","bitterly","bleakly","blindly","blissfully","boastfully","boldly","bravely","briefly","brightly","briskly","broadly","busily","calmly","carefully","carelessly","cautiously","certainly","cheerfully","clearly","cleverly","closely","coaxingly","colorfully","commonly","continually","coolly","correctly","courageously","crossly","cruelly","curiously","daily","daintily","dearly","deceivingly","deeply","defiantly","deliberately","delightfully","diligently","dimly","doubtfully","dreamily","easily","elegantly","energetically","enormously","enthusiastically","equally","especially","even","evenly","eventually","exactly","excitedly","extremely","fairly","faithfully","famously","far","fast","fatally","ferociously","fervently","fiercely","fondly","foolishly","fortunately","frankly","frantically","freely","frenetically","frightfully","fully","furiously","generally","generously","gently","gladly","gleefully","gracefully","gratefully","greatly","greedily","happily","hastily","healthily","heavily","helpfully","helplessly","highly","honestly","hopelessly","hourly","hungrily","immediately","innocently","inquisitively","instantly","intensely","intently","interestingly","inwardly","irritably","jaggedly","jealously","jovially","joyfully","joyously","jubilantly","judgmentally","justly","keenly","kiddingly","kindheartedly","kindly","knavishly","knowingly","knowledgeably","kookily","lazily","les","lightly","likely","limply","lively","loftily","longingly","loosely","loudly","lovingly","loyally","madly","majestically","meaningfully","mechanically","merrily","miserably","mockingly","monthly","more","mortally","mostly","mysteriously","naturally","hopelessly","hourly","hungrily","immediately","innocently","inquisitively","instantly","intensely","intently","interestingly","inwardly","irritably","jaggedly","jealously","jovially","joyfully","joyously","jubilantly","judgmentally","justly","keenly","kiddingly","kindheartedly","kindly","knavishly","knowingly","knowledgeably","kookily","lazily","less","lightly","likely","limply","lively","loftily","longingly","loosely","loudly","lovingly","loyally","madly","majestically","meaningfully","mechanically","merrily","miserably","mockingly","monthly","more","mortally","mostly","mysteriously","naturally","nearly","neatly","nervously","never","nicely","noisily","not","obediently","obnoxiously","oddly","offensively","officially","often","only","openly","optimistically","overconfidently","painfully","partially","patiently","perfectly","physically","playfully","politely","poorly","positively","potentially","powerfully","promptly","properly","punctually","quaintly","queasily","queerly","questionably","quicker","quickly","quietly","quirkily","quizzically","randomly","rapidly","rarely","readily","really","reassuringly","recklessly","regularly","reluctantly","repeatedly","reproachfully","restfully","righteously","rightfully","rigidly","roughly","rudely","safely","scarcely","scarily","searchingly","sedately","seemingly","seldom","selfishly","separately","seriously","shakily","sharply","sheepishly","shrilly","shyly","silently","sleepily","slowly","smoothly","softly","solemnly","solidly","sometimes","soon","speedily","stealthily","sternly","strictly","successfully","suddenly","supposedly","surprisingly","suspiciously","sweetly","swiftly","sympathetically","tenderly","tensely","terribly","thankfully","thoroughly","thoughtfully","tightly","tomorrow","too","tremendously","triumphantly","truly","truthfully","rightfully","scarcely","searchingly","sedately","seemingly","selfishly","separately","seriously","sheepishly","smoothly","solemnly","sometimes","speedily","stealthily","successfully","suddenly","supposedly","surprisingly","suspiciously","sympathetically","tenderly","thankfully","thoroughly","thoughtfully","tomorrow","tremendously","triumphantly","truthfully","ultimately","unabashedly","unaccountably","unbearably","unethically","unexpectedly","unfortunately","unimpressively","unnaturally","unnecessarily","upbeat","upright","upside","down","upward","urgently","usefully","uselessly","usually","utterly","vacantly","vaguely","vainly","valiantly","vastly","verbally","very","viciously","victoriously","violently","vivaciously","voluntarily","warmly","weakly","wearily","well","wetly","wholly","wildly","willfully","wisely","woefully","wonderfully","worriedly","wrongly","yawningly","yearly","yearningly","yesterday","yieldingly","youthfully","zealously","zestfully","zestily"] 
+
+pronounSet = S.fromList pronouns
+
+pronouns = ["all",
+    "another",
+    "any",
+    "anybody",
+    "anyone",
+    "anything",
+    "both",
+    "each",
+    "each", "other",
+    "either",
+    "everybody",
+    "everyone",
+    "everything",
+    "few",
+
+
+
+    "he",
+    "her",
+    "hers",
+    "herself",
+    "him",
+    "himself",
+    "his",
+
+
+
+    "I",
+    "it",
+    "its",
+    "itself",
+
+
+
+    "little",
+
+
+
+    "many",
+    "me",
+    "mine",
+    "more",
+    "most",
+    "much",
+    "my",
+    "myself",
+
+
+
+    "neither",
+    "no", "one",
+    "nobody",
+    "none",
+    "nothing",
+
+
+
+    "one",
+    "one", "another",
+    "other",
+    "others",
+    "our",
+    "ours",
+    "ourselves",
+
+
+
+    "several",
+    "she",
+    "some",
+    "somebody",
+    "someone",
+    "something",
+
+
+
+    "that",
+    "their",
+    "theirs",
+    "them",
+    "themselves",
+    "these",
+    "they",
+    "this",
+    "those",
+
+
+
+    "us",
+
+
+
+    "we",
+    "what",
+    "whatever",
+    "which",
+    "whichever",
+    "who",
+    "whoever",
+    "whom",
+    "whomever",
+    "whose",
+
+
+
+    "you",
+    "your",
+    "yours",
+    "yourself",
+    "yourselves"]
 
 nounSet = S.fromList nouns
 

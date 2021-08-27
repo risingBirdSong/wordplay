@@ -28,6 +28,8 @@ dependencies:
 - list-transformer
 - random
 - MonadRandom
+- split
+- ansi-terminal
 
 library:
   source-dirs: src
